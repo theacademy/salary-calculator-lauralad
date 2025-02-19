@@ -59,14 +59,17 @@ public class EmployeeSalaryCalculator
 				if(HW <= standardWorkingHours)
 				{
 					//YOUR CODE STARTS HERE
-					 
+					 grossSalary = hourlyRate * hoursWorked;
 
 					//YOUR CODE ENDS HERE
 				}
 				else
 				{
 					//YOUR CODE STARTS HERE
- 
+					// we have to subtract to find out the number of overwork hours
+					// in order to calculate the proper salary
+ 					grossSalary = 2 * hourlyRate * (hoursWorked - standardWorkingHours) +
+							hourlyRate * standardWorkingHours;
 
 					//YOUR CODE ENDS HERE
 				}
